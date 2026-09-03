@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.ruml.ecommerce</groupId>
+        <artifactId>ruml-backend</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <artifactId>ruml-backend-core</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>ruml-backend-core-shared</module>
+        <module>ruml-backend-core-user</module>
+        <module>ruml-backend-core-order</module>
+        <module>ruml-backend-core-settings</module>
+        <module>ruml-backend-core-product</module>
+        <module>ruml-backend-core-support</module>
+        <module>ruml-backend-core-audit</module>
+    </modules>
+</project>
