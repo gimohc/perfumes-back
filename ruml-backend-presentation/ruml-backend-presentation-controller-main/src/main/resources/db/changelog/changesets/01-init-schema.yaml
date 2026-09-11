@@ -1,0 +1,58 @@
+databaseChangeLog:
+  - changeSet:
+      id: 01-init-schema
+      author: antigravity
+      changes:
+        - createTable:
+            tableName: auths
+            columns:
+              - column:
+                  name: id
+                  type: varchar(255)
+                  constraints:
+                    primaryKey: true
+
+        - createTable:
+            tableName: stores
+            columns:
+              - column:
+                  name: id
+                  type: varchar(255)
+                  constraints:
+                    primaryKey: true
+
+        - createTable:
+            tableName: perfumes
+            columns:
+              - column:
+                  name: id
+                  type: varchar(255)
+                  constraints:
+                    primaryKey: true
+
+        - createTable:
+            tableName: orders
+            columns:
+              - column:
+                  name: id
+                  type: varchar(255)
+                  constraints:
+                    primaryKey: true
+
+        - createTable:
+            tableName: supports
+            columns:
+              - column:
+                  name: id
+                  type: varchar(255)
+                  constraints:
+                    primaryKey: true
+
+        - createTable:
+            tableName: audits
+            columns:
+              - column:
+                  name: id
+                  type: varchar(255)
+                  constraints:
+                    primaryKey: true
