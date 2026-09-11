@@ -12,6 +12,10 @@
     
     <dependencies>
         <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-crypto</artifactId>
+        </dependency>
+        <dependency>
             <groupId>com.ruml.ecommerce</groupId>
             <artifactId>ruml-backend-core-auth-function</artifactId>
             <version>${project.version}</version>
