@@ -20,5 +20,10 @@
             <artifactId>ruml-backend-core-perfume-dao</artifactId>
             <version>${project.version}</version>
         </dependency>
+        <dependency>
+            <groupId>com.ruml.ecommerce</groupId>
+            <artifactId>ruml-backend-core-perfume-usecase</artifactId>
+            <version>${project.version}</version>
+        </dependency>
     </dependencies>
 </project>

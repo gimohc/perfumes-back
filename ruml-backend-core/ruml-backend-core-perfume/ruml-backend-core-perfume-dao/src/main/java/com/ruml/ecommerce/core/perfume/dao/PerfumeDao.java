@@ -4,5 +4,7 @@ import com.ruml.ecommerce.core.shared.dao.Dao;
 import com.ruml.ecommerce.core.perfume.entity.PerfumeEntity;
 import com.ruml.ecommerce.core.perfume.identity.PerfumeId;
 
-public interface PerfumeDao extends Dao<PerfumeEntity, PerfumeId> {
+import com.ruml.ecommerce.core.perfume.port.PerfumePort;
+
+public interface PerfumeDao extends Dao<PerfumeEntity, PerfumeId>, PerfumePort {
 }

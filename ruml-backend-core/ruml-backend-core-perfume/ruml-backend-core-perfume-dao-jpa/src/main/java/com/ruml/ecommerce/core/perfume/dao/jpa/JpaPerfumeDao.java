@@ -18,4 +18,9 @@ public class JpaPerfumeDao implements PerfumeDao {
     public Optional<PerfumeEntity> findById(PerfumeId id) {
         return repository.findById(id);
     }
+
+    @Override
+    public PerfumeEntity save(PerfumeEntity perfume) {
+        return repository.save(perfume);
+    }
 }
