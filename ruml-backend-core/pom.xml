@@ -18,5 +18,6 @@
         <module>ruml-backend-core-order</module>
         <module>ruml-backend-core-support</module>
         <module>ruml-backend-core-audit</module>
+        <module>ruml-backend-core-b2b</module>
     </modules>
 </project>

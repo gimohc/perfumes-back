@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.ruml.ecommerce</groupId>
+        <artifactId>ruml-backend-core</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <artifactId>ruml-backend-core-b2b</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>ruml-backend-core-b2b-entity</module>
+        <module>ruml-backend-core-b2b-port</module>
+        <module>ruml-backend-core-b2b-dao</module>
+        <module>ruml-backend-core-b2b-dao-jpa</module>
+        <module>ruml-backend-core-b2b-factory</module>
+        <module>ruml-backend-core-b2b-usecase</module>
+    </modules>
+</project>
