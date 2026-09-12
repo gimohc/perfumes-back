@@ -1,3 +1,3 @@
 package com.ruml.ecommerce.core.auth.factory.response;
 
-public record LoginResponse() {}
+public record LoginResponse(String token) {}

@@ -24,6 +24,11 @@
             <artifactId>ruml-backend-core-auth-factory</artifactId>
             <version>${project.version}</version>
         </dependency>
+        <dependency>
+            <groupId>com.ruml.ecommerce</groupId>
+            <artifactId>ruml-backend-core-shared-usecase</artifactId>
+            <version>${project.version}</version>
+        </dependency>
     </dependencies>
 
 </project>

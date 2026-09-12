@@ -1,3 +1,3 @@
 package com.ruml.ecommerce.core.auth.factory.request;
 
-public record GetSessionRequest() {}
+public record GetSessionRequest(String userId) {}

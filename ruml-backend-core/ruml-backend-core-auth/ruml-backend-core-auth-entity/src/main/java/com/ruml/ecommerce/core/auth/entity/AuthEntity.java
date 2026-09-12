@@ -11,17 +11,25 @@ public class AuthEntity implements Entity<AuthId> {
     
     @EmbeddedId
     private AuthId id;
+    
+    private String email;
+    private String passwordHash;
 
     protected AuthEntity() {
         // JPA requires default constructor
     }
 
-    public AuthEntity(AuthId id) {
+    public AuthEntity(AuthId id, String email, String passwordHash) {
         this.id = id;
+        this.email = email;
+        this.passwordHash = passwordHash;
     }
 
     @Override
     public AuthId getId() {
         return id;
     }
+    
+    public String getEmail() { return email; }
+    public String getPasswordHash() { return passwordHash; }
 }
