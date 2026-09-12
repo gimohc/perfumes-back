@@ -1,0 +1,29 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: liquibase-migration
+spec:
+  template:
+    spec:
+      containers:
+      - name: liquibase
+        image: liquibase/liquibase:4.20
+        command: ["liquibase"]
+        args: ["--url=$(DB_URL)", "--username=$(DB_USER)", "--password=$(DB_PASS)", "--changeLogFile=db/changelog/db.changelog-master.xml", "update"]
+        envFrom:
+        - configMapRef:
+            name: backend-config
+        env:
+        - name: DB_PASS
+          valueFrom:
+            secretKeyRef:
+              name: db-secret
+              key: password
+        volumeMounts:
+        - name: changelog-volume
+          mountPath: /liquibase/changelog
+      restartPolicy: OnFailure
+      volumes:
+      - name: changelog-volume
+        configMap:
+          name: liquibase-changelog

@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ruml-backend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: ruml-backend
+  template:
+    metadata:
+      labels:
+        app: ruml-backend
+    spec:
+      containers:
+      - name: ruml-backend
+        image: ruml-backend:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8080
+        envFrom:
+        - configMapRef:
+            name: backend-config
+        env:
+        - name: DB_PASS
+          valueFrom:
+            secretKeyRef:
+              name: db-secret
+              key: password
+        readinessProbe:
+          httpGet:
+            path: /v3/api-docs
+            port: 8080
+          initialDelaySeconds: 15
+          periodSeconds: 10
+        livenessProbe:
+          httpGet:
+            path: /v3/api-docs
+            port: 8080
+          initialDelaySeconds: 30
+          periodSeconds: 10
