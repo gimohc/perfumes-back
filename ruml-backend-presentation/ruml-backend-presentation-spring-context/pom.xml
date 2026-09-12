@@ -10,6 +10,19 @@
     </parent>
     <artifactId>ruml-backend-presentation-spring-context</artifactId>
     <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.ruml.ecommerce</groupId>
+            <artifactId>ruml-backend-core-shared-usecase</artifactId>
+            <version>${project.version}</version>
+        </dependency>
     </dependencies>
 
 </project>
