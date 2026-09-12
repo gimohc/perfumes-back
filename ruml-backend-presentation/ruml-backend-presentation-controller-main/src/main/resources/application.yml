@@ -2,6 +2,17 @@ server:
   port: 8080
 
 spring:
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/ruml_db}
+    username: ${DB_USER:postgres}
+    password: ${DB_PASS:postgres}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
   liquibase:
     enabled: true
     change-log: classpath:db/changelog/db.changelog-master.yaml
