@@ -1,3 +1,3 @@
 package com.ruml.ecommerce.core.store.factory.request;
 
-public record GetStoreSettingsRequest() {}
+public record GetStoreSettingsRequest(String storeId) {}

@@ -1,3 +1,5 @@
 package com.ruml.ecommerce.core.support.factory.request;
 
-public record GetMessagesRequest() {}
+import com.ruml.ecommerce.core.shared.entity.pagination.PageQuery;
+
+public record GetMessagesRequest(PageQuery query) {}

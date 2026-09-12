@@ -1,8 +1,8 @@
-package com.ruml.ecommerce.core.store.factory.request;
+package com.ruml.ecommerce.core.store.entity.readmodel;
 
 import java.math.BigDecimal;
 
-public record UpdateStoreSettingsRequest(
+public record StoreReadModel(
         String storeId,
         String currency,
         int minimumOrderQuantity,
