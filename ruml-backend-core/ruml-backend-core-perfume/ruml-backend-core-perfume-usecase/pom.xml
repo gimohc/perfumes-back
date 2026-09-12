@@ -26,5 +26,10 @@
             <artifactId>ruml-backend-core-perfume-factory</artifactId>
             <version>${project.version}</version>
         </dependency>
+        <dependency>
+            <groupId>com.ruml.ecommerce</groupId>
+            <artifactId>ruml-backend-core-perfume-port</artifactId>
+            <version>${project.version}</version>
+        </dependency>
     </dependencies>
 </project>
