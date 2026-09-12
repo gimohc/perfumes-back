@@ -22,4 +22,10 @@
         <module>ruml-backend-presentation-spring-context</module>
         <module>ruml-backend-presentation-controller-main</module>
     </modules>
+    <dependencies>
+        <dependency>
+            <groupId>io.swagger.core.v3</groupId>
+            <artifactId>swagger-annotations</artifactId>
+        </dependency>
+    </dependencies>
 </project>
