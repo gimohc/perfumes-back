@@ -1,6 +1,5 @@
 package com.ruml.ecommerce.core.b2b.factory.response;
 
-public record SubmitQuoteResponse(
-    String quoteId,
-    String status
-) {}
+import com.ruml.ecommerce.core.b2b.entity.readmodel.QuoteReadModel;
+
+public record SubmitQuoteResponse(QuoteReadModel quote) {}

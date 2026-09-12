@@ -18,12 +18,32 @@ public class DefaultSubmitQuoteUseCase implements SubmitQuoteUseCase {
 
     @Override
     public SubmitQuoteResponse execute(SubmitQuoteRequest request) {
-        B2BQuoteEntity quote = quotePort.findById(new B2BQuoteId(request.quoteId()))
-            .orElseThrow(() -> new DomainException("QUOTE_NOT_FOUND", "Quote not found"));
+        B2BQuoteEntity quote = new B2BQuoteEntity(
+            new B2BQuoteId(java.util.UUID.randomUUID().toString()),
+            request.customerEmail(),
+            request.companyName()
+        );
+        
+        for (SubmitQuoteRequest.QuoteItemRequest itemReq : request.items()) {
+            quote.addItem(new com.ruml.ecommerce.core.b2b.entity.QuoteItem(
+                itemReq.perfumeId(),
+                itemReq.quantity()
+            ));
+        }
             
         quote.submit();
         B2BQuoteEntity saved = quotePort.save(quote);
         
-        return new SubmitQuoteResponse(saved.getId().value(), saved.getStatus().name());
+        com.ruml.ecommerce.core.b2b.entity.readmodel.QuoteReadModel readModel = 
+            new com.ruml.ecommerce.core.b2b.entity.readmodel.QuoteReadModel(
+                saved.getId().value(),
+                saved.getCustomerEmail(),
+                saved.getCompanyName(),
+                saved.getStatus(),
+                saved.getItems(),
+                saved.getTerms()
+            );
+        
+        return new SubmitQuoteResponse(readModel);
     }
 }

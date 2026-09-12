@@ -15,6 +15,7 @@
         <module>ruml-backend-presentation-controller-store</module>
         <module>ruml-backend-presentation-controller-perfume</module>
         <module>ruml-backend-presentation-controller-order</module>
+        <module>ruml-backend-presentation-controller-b2b</module>
         <module>ruml-backend-presentation-controller-support</module>
         <module>ruml-backend-presentation-controller-audit</module>
         <module>ruml-backend-presentation-controller-payment</module>
