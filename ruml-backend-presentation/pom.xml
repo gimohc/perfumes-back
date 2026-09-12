@@ -17,6 +17,7 @@
         <module>ruml-backend-presentation-controller-order</module>
         <module>ruml-backend-presentation-controller-support</module>
         <module>ruml-backend-presentation-controller-audit</module>
+        <module>ruml-backend-presentation-controller-payment</module>
         <module>ruml-backend-presentation-controller-shared</module>
         <module>ruml-backend-presentation-security-filter-jwt</module>
         <module>ruml-backend-presentation-spring-context</module>
