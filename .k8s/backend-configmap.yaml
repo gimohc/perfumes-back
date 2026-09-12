@@ -5,3 +5,4 @@ metadata:
 data:
   DB_URL: "jdbc:postgresql://postgres-svc:5432/ruml_db"
   DB_USER: "postgres"
+  SPRING_LIQUIBASE_ENABLED: "false"

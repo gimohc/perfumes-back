@@ -7,9 +7,9 @@ spec:
     spec:
       containers:
       - name: liquibase
-        image: liquibase/liquibase:4.20
-        command: ["liquibase"]
-        args: ["--url=$(DB_URL)", "--username=$(DB_USER)", "--password=$(DB_PASS)", "--changeLogFile=db/changelog/db.changelog-master.xml", "update"]
+        # In a real environment, this would be pushed to a registry, e.g., myregistry/ruml-liquibase:latest
+        image: ruml-liquibase:latest
+        imagePullPolicy: IfNotPresent
         envFrom:
         - configMapRef:
             name: backend-config
@@ -19,11 +19,4 @@ spec:
             secretKeyRef:
               name: db-secret
               key: password
-        volumeMounts:
-        - name: changelog-volume
-          mountPath: /liquibase/changelog
       restartPolicy: OnFailure
-      volumes:
-      - name: changelog-volume
-        configMap:
-          name: liquibase-changelog

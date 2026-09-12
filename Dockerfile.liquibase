@@ -1,0 +1,5 @@
+FROM liquibase/liquibase:4.20
+
+COPY ruml-backend-presentation/ruml-backend-presentation-controller-main/src/main/resources/db/changelog /liquibase/changelog
+
+CMD ["--url=${DB_URL}", "--username=${DB_USER}", "--password=${DB_PASS}", "--changeLogFile=/liquibase/changelog/db.changelog-master.yaml", "update"]
